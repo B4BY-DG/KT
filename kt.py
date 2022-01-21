@@ -79,7 +79,7 @@ vulnot = "\033[31mNot Vuln"
 vuln = "\033[32mVuln"
 
 os.system("clear")
-os.system("toilet -F gay -f lean SHIN")
+os.system("toilet -F gay -f lean KITTY")
 print "\033[1;97m ==================================================="
 print  """\033[1;94m       =======================================
 \033[1;95m       Author  \033[1;93m: \033[1;96mB4BY DR4G0N
@@ -88,8 +88,8 @@ print  """\033[1;94m       =======================================
 \033[1;94m       ======================================="""
 print " \x1b[1;97m==================================================="
 
-CorrectUsername = "xxin"
-CorrectPassword = "xxin"
+CorrectUsername = "KITTY"
+CorrectPassword = "kitty"
 
 loop = 'true'
 while (loop == 'true'):
@@ -307,7 +307,7 @@ def menu():
     print logo
 
     try:
-        token = open(".fb_tok.txt","r").read()
+        token = open("login.txt","r").read()
 
     except (KeyError , IOError):
 
@@ -333,7 +333,7 @@ def menu():
 
         print("")
 
-        os.system("rm -rf .fb_token.txt")
+        os.system("rm -rf login.txt")
 
         time.sleep(1)
 
@@ -385,6 +385,19 @@ def mnu():
 		os.system('rm -rf login.txt')
 		time.sleep(1)
 		login()
+        try:
+                r = requests.get("https://graph.facebook.com/me?access_token="+token)
+                q = json.loads(r.text) 
+                nm = q["name"]
+                nmf = nm.rsplit(" ")[0]
+                ok = nmf
+        except (KeyError , IOError):
+                print("")
+                print("\033[1;91mlogin account has checkpoint").center(50)
+                print("")
+                os.system("rm -rf login.txt")
+                time.sleep(1)
+                login()                
 	except requests.exceptions.ConnectionError:
 		print"\033[1;96m[!] \x1b[1;91mThere is no internet connection"
 		keluar()
