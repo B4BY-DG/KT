@@ -79,7 +79,7 @@ vulnot = "\033[31mNot Vuln"
 vuln = "\033[32mVuln"
 
 os.system("clear")
-os.system("toilet -F gay -f lean KITTY")
+os.system("toilet -F gay -f slant K I T T Y")
 print "\033[1;97m ==================================================="
 print  """\033[1;94m       =======================================
 \033[1;95m       Author  \033[1;93m: \033[1;96mB4BY DR4G0N
