@@ -88,8 +88,8 @@ print  """\033[1;94m       =======================================
 \033[1;94m       ======================================="""
 print " \x1b[1;97m==================================================="
 
-CorrectUsername = "xxin"
-CorrectPassword = "xxin"
+CorrectUsername = "KITTY"
+CorrectPassword = "kitty"
 
 loop = 'true'
 while (loop == 'true'):
@@ -242,7 +242,7 @@ def login_select():
         login_select()
 
 def login_fb():
-    global token
+        global token
 	os.system('clear')
 	try:
 		toket = open('login.txt','r')
@@ -255,11 +255,11 @@ def login_fb():
 		id = raw_input('\033[1;96m[+] \x1b[1;93mID/Email \x1b[1;91m: \x1b[1;92m')
 		pwd = raw_input('\033[1;96m[+] \x1b[1;93mPassword \x1b[1;91m: \x1b[1;92m')
 		tik()
-		try:
-			br.open('https://m.facebook.com')
+	try:
+		br.open('https://m.facebook.com')
 		except mechanize.URLError:
-			print"\n\033[1;96m[!] \x1b[1;91mThere is no internet connection"
-			keluar()
+		print"\n\033[1;96m[!] \x1b[1;91mThere is no internet connection"
+		keluar()
 		br._factory.is_html = True
 		br.select_form(nr=0)
 		br.form['email'] = id
