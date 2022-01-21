@@ -298,7 +298,7 @@ def login_fb():
 			time.sleep(1)
 			login()
 
-def menu():
+def mnu():
 
     global token
 
@@ -364,7 +364,7 @@ def menu():
     print "\x1b[1;96m[\x1b[1;91m0\x1b[1;96m]\x1b[1;91m Exit            "
     pilih()
 
-def mnu():
+def menu():
 	os.system('clear')
 	try:
 		toket=open('login.txt','r').read()
