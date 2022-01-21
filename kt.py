@@ -300,7 +300,7 @@ def login_fb():
 
 
 def menu():
-    global token
+        global token
 	os.system('clear')
 	try:
 		toket=open('login.txt','r').read()
@@ -326,44 +326,6 @@ def menu():
 	except requests.exceptions.ConnectionError:
 		print"\033[1;96m[!] \x1b[1;91mThere is no internet connection"
 		keluar()
-        try:
-                r = requests.get("https://graph.facebook.com/me?access_token="+token)
-
-                q = json.loads(r.text)
-
-                nm = q["name"]
-
-                nmf = nm.rsplit(" ")[0]
-
-                ok = nmf
-
-        except (KeyError , IOError):
-
-                print("")
-
-                print("\033[1;91mlogin account has checkpoint").center(50)
-
-                print("")
-
-                os.system("rm -rf .fb_token.txt")
-
-                time.sleep(1)
-
-                login()
-
-        except requests.exceptions.ConnectionError:
-
-                print logo
-
-                print("")
-
-                print("\033[1;91mYour internet connection failed").center(50)
-
-                print("")
-
-                time.sleep(2)
-
-                menu()
 
      	os.system("clear")
 	print logo
