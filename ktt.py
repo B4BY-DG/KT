@@ -300,7 +300,7 @@ def login_fb():
 
 
 def menu():
-    global token
+        global token
 	os.system('clear')
 	try:
 		toket=open('login.txt','r').read()
