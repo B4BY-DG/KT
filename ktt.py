@@ -242,7 +242,7 @@ def login_select():
         login_select()
 
 def login_fb():
-    global token
+        global token
 	os.system('clear')
 	try:
 		toket = open('login.txt','r')
