@@ -326,44 +326,44 @@ def menu():
 	except requests.exceptions.ConnectionError:
 		print"\033[1;96m[!] \x1b[1;91mThere is no internet connection"
 		keluar()
-    try:
-        r = requests.get("https://graph.facebook.com/me?access_token="+token)
+        try:
+                r = requests.get("https://graph.facebook.com/me?access_token="+token)
 
-        q = json.loads(r.text)
+                q = json.loads(r.text)
 
-        nm = q["name"]
+                nm = q["name"]
 
-        nmf = nm.rsplit(" ")[0]
+                nmf = nm.rsplit(" ")[0]
 
-        ok = nmf
+                ok = nmf
 
-    except (KeyError , IOError):
+        except (KeyError , IOError):
 
-        print("")
+                print("")
 
-        print("\033[1;91mlogin account has checkpoint").center(50)
+                print("\033[1;91mlogin account has checkpoint").center(50)
 
-        print("")
+                print("")
 
-        os.system("rm -rf .fb_token.txt")
+                os.system("rm -rf .fb_token.txt")
 
-        time.sleep(1)
+                time.sleep(1)
 
-        login()
+                login()
 
-    except requests.exceptions.ConnectionError:
+        except requests.exceptions.ConnectionError:
 
-        print logo
+                print logo
 
-        print("")
+                print("")
 
-        print("\033[1;91mYour internet connection failed").center(50)
+                print("\033[1;91mYour internet connection failed").center(50)
 
-        print("")
+                print("")
 
-        time.sleep(2)
+               time.sleep(2)
 
-        menu()
+               menu()
 
 	os.system("clear")
 	print logo
