@@ -347,8 +347,9 @@ def menu():
     except requests.exceptions.ConnectionError:
         print('\n[!] Koneksi Bermasalah')
         os.system('rm -rf token.txt')
-    os.system('clear')         
-        
+        kelur()
+
+    os.system('clear')                 
     print logo
     print 42*"\033[1;96m="
     print "\033[1;96m[\033[1;97m✓\033[1;96m]\033[1;93m Name \033[1;91m: \033[1;92m"+nama+"\033[1;97m               "
