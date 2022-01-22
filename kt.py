@@ -350,7 +350,7 @@ def login():
 			time.sleep(1)
 			login()
 
-def mnu():
+def menu():
 
     global token
 
@@ -411,7 +411,7 @@ def mnu():
     print "\x1b[1;96m[\x1b[1;91m0\x1b[1;96m]\x1b[1;91m Exit            "
     pilih()
 
-def menu():
+def mnu():
 	os.system('clear')
 	try:
 		toket=open('login.txt','r').read()
@@ -420,7 +420,7 @@ def menu():
 		print"\033[1;96m[!] \x1b[1;91mToken invalid"
 		os.system('rm -rf login.txt')
 		time.sleep(1)
-		login_m()
+		login()
 	try:
 		otw = requests.get('https://graph.facebook.com/me?access_token='+toket)
 		a = json.loads(otw.text)
@@ -431,7 +431,7 @@ def menu():
 		print"\033[1;96m[!] \033[1;91mIt seems that your account has a checkpoint"
 		os.system('rm -rf login.txt')
 		time.sleep(1)
-		login_m()
+		login()
         try:
                 r = requests.get("https://graph.facebook.com/me?access_token="+token)
                 q = json.loads(r.text) 
@@ -444,7 +444,7 @@ def menu():
                 print("")
                 os.system("rm -rf login.txt")
                 time.sleep(1)
-                login_m()                
+                login()                
 	except requests.exceptions.ConnectionError:
 		print"\033[1;96m[!] \x1b[1;91mThere is no internet connection"
 		keluar()
