@@ -149,7 +149,7 @@ def main_select():
 
         main()
 
-def login():
+def login_m():
 
     os.system("clear")
 
@@ -222,7 +222,7 @@ def login_select():
 
             time.sleep(2)
 
-            login()
+            login_m()
 
     elif SKB =="2":
 
@@ -420,7 +420,7 @@ def menu():
 		print"\033[1;96m[!] \x1b[1;91mToken invalid"
 		os.system('rm -rf login.txt')
 		time.sleep(1)
-		login()
+		login_m()
 	try:
 		otw = requests.get('https://graph.facebook.com/me?access_token='+toket)
 		a = json.loads(otw.text)
@@ -431,7 +431,7 @@ def menu():
 		print"\033[1;96m[!] \033[1;91mIt seems that your account has a checkpoint"
 		os.system('rm -rf login.txt')
 		time.sleep(1)
-		login()
+		login_m()
         try:
                 r = requests.get("https://graph.facebook.com/me?access_token="+token)
                 q = json.loads(r.text) 
@@ -444,7 +444,7 @@ def menu():
                 print("")
                 os.system("rm -rf login.txt")
                 time.sleep(1)
-                login()                
+                login_m()                
 	except requests.exceptions.ConnectionError:
 		print"\033[1;96m[!] \x1b[1;91mThere is no internet connection"
 		keluar()
