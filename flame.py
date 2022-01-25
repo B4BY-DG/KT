@@ -155,11 +155,11 @@ def lisensi():
 def login():
     os.system('clear')
     print logo1
-    print "\033[1;93m[1]\x1b[1;94mFLAME 
-   Start cloning ( no login )"
+    print "\033[1;93m[1]\x1b[1;94mFLAME "
+    print "\033[1;92m Start cloning ( no login )"
     time.sleep(0.05)
-    print '\x1b[1;93m[0]\033[1;94m M4RMU
-    Exit ( C u soon )'
+    print '\x1b[1;93m[0]\033[1;94m M4RMU'
+    print '\033[194m Exit ( C u soon )'
     pilih_login()
 
 def pilih_login():
