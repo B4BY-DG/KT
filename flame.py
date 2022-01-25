@@ -132,7 +132,6 @@ logo2 = """
 \033[1;94m---------------------------------------------------
 """
 
-Username="FLAME"
 CorrectPasscode = "Dragon"
 
 loop = 'true'
