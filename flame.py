@@ -165,10 +165,10 @@ def login():
 def pilih_login():
     peak = raw_input("\n\033[1;95m𝐅𝐋𝐀𝐌𝐄 𝐍𝐀𝐈𝐌 CHOOSE: \033[1;95m"
     if peak =="":
-        print "\x1b[1;95mFill In Correctly"
-        pilih_login()
+    print "\x1b[1;95mFill In Correctly"
+    pilih_login()
     elif peak =="1":
-        Zeek()
+    Zeek()
 def Zeek():
     os.system('clear')
     print logo1
@@ -181,8 +181,8 @@ def Zeek():
 def action():
     peak = raw_input('\n\033[1;95mAWAIX CHOOSE:\033[1;97m')
     if peak =='':
-        print '[!] Fill In Correctly'
-        action()
+    print '[!] Fill In Correctly'
+    action()
     elif peak =="1":              
         os.system("clear")
         print logo2
@@ -193,7 +193,7 @@ def action():
             k="+880"
             idlist = ('.txt')
             for line in open(idlist,"r").readlines():
-                id.append(line.strip())
+            id.append(line.strip())
         except IOError:
             print ("[!] File Not Found")
             raw_input("\n[ Back ]")
