@@ -164,7 +164,7 @@ def login():
 
 def pilih_login():
     peak = raw_input("\n\033[1;95m𝐅𝐋𝐀𝐌𝐄 𝐍𝐀𝐈𝐌 CHOOSE: \033[1;95m"
-    if peak =="":
+    if peak =="0":
     print "\x1b[1;95mFill In Correctly"
     pilih_login()
     elif peak =="1":
@@ -210,7 +210,8 @@ def action():
     jalan ("\033[1;92mWait 𝐅𝐋𝐀𝐌𝐄 𝐍𝐀𝐈𝐌 Start Cracking...")
     jalan ("\033[1;92mTo Stop Process Press Ctrl+z")
     print 50* '\033[1;91m-'
-    def main(arg):
+
+def main(arg):
         global cpb,oks
         user = arg
         try:
